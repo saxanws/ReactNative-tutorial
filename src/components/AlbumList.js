@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
-import { View } from 'react-native';
+import { View, FlatList, ScrollView } from 'react-native';
 import {fetch} from 'fetch';
-import albumDetail from './albumDetail';
-import AlbumDetail from './albumDetail';
+import AlbumDetail from './AlbumDetail';
 
 
 
@@ -25,12 +24,15 @@ class AlbumList extends Component {
 
     render() {
         return(
-            <View>
+            <ScrollView>
                 {this.renderAlbums()}
-            </View>
+            </ScrollView>
+
         )
     }
 
-}
+};
+
+
 
 export default AlbumList;
